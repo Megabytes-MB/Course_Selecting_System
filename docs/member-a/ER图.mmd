@@ -1,0 +1,31 @@
+erDiagram
+    STUDENT ||--o{ ENROLLMENT : selects
+    TEACHING_CLASS ||--o{ ENROLLMENT : contains
+    COURSE ||--o{ TEACHING_CLASS : offers
+    STUDENT {
+        bigint id PK
+        varchar student_no UK
+        varchar name
+        varchar major
+    }
+    ENROLLMENT {
+        bigint id PK
+        bigint student_id FK
+        bigint teaching_class_id FK
+        varchar status
+        datetime selected_at
+        datetime withdrawn_at
+        decimal score
+    }
+    TEACHING_CLASS {
+        bigint id PK
+        varchar class_code
+        bigint course_id FK
+        bigint semester_id FK
+        int capacity
+    }
+    COURSE {
+        bigint id PK
+        varchar name
+        decimal credits
+    }
