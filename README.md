@@ -8,7 +8,7 @@
 
 | 分支 | 用途 |
 |---|---|
-| `main` | 默认分支；当前文件树为空，作为后续集成的基线 |
+| `main` | 默认分支；最近获取的版本有占位 README，后续通过 PR 集成各模块 |
 | `member-a/student-enrollment` | 成员 A：学生、选课与成绩 |
 | `member-b/teacher-course` | 计划由成员 B 使用：教师、课程与公共 Java 工程 |
 | `member-c/semester-teaching` | 计划由成员 C 使用：学期、教学班与数据库集成 |
@@ -21,7 +21,7 @@
 | B | `teacher`、`course` | 教师与课程管理；公共 Maven 工程、`DBUtil`、`Main` |
 | C | `semester`、`teaching_class` | 学期与教学班管理、容量调整、名单与统计；数据库及最终材料集成 |
 
-跨模块字段、编号和事务协议以 [A 模块接口契约](contracts/student-enrollment.md) 为提案，需三人确认后固定。具体对接事项见 [协作交接清单](docs/member-a/05_协作交接.md)。
+跨模块字段、编号和事务协议统一参见 [三模块集成基线](contracts/integration-baseline.md)；当前确认栏仍待三人完成，确认后冻结。[A 模块接口契约](contracts/student-enrollment.md) 补充模块细节，具体对接事项见 [协作交接清单](docs/member-a/05_协作交接.md)。最新同步与待办见 [项目进度记录](docs/项目进度记录.md)。
 
 ## 当前功能
 
