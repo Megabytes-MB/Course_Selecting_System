@@ -1,6 +1,6 @@
 # A模块接口契约
 
-状态：A实现采用的提案，等待B、C确认；并非三人已确认的接口。
+状态：A模块详细契约。跨模块共享字段、执行顺序、事务锁协议和联合验收以[三模块集成基线](integration-baseline.md)为准；该基线需由B、C确认后冻结。
 
 ## 环境和字段
 
@@ -33,7 +33,7 @@ new StudentMenu(DBUtil::getConnection).run(scanner);
 
 ## 数据编号和执行顺序
 
-A演示student id为1001—1010；enrollment id为3001—3010，依赖C提供teaching_class id为2001—2010，并为这些班预留至少1个名额。该编号段待C确认。A脚本顺序：01_create_student → B/C建表 → 04_create_enrollment → 11_seed_student → B/C初始化 → 14_seed_enrollment。初始化仅在空测试库运行，不覆盖现有记录。
+A演示student id为1001—1010；enrollment id为3001—3010。按集成基线，C提供teaching_class id 2001—2010且初始容量不得小于3。A脚本顺序：01_create_student → B/C建表 → 04_create_enrollment → 11_seed_student → B/C初始化 → 14_seed_enrollment。初始化仅在空测试库运行，不覆盖现有记录。
 
 ## 验收
 
