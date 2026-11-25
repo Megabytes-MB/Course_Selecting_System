@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420">
+<rect width="960" height="420" fill="white"/>
+<g font-family="Microsoft YaHei, sans-serif" fill="#17202a">
+<text x="35" y="36" font-size="22">教师与课程 E-R 图片段</text>
+<text x="35" y="64" font-size="14">B 负责 teacher、course；teaching_class 为 C 负责的关联上下文</text>
+<g fill="#f3f6fa" stroke="#536779" stroke-width="1.5">
+<rect x="35" y="110" width="250" height="170" rx="4"/>
+<rect x="350" y="180" width="260" height="190" rx="4"/>
+<rect x="675" y="110" width="250" height="200" rx="4"/>
+</g>
+<g font-size="18"><text x="52" y="140">teacher 教师</text><text x="367" y="210">teaching_class 教学班</text><text x="692" y="140">course 课程</text></g>
+<g font-size="15">
+<text x="52" y="177">PK id : BIGINT</text><text x="52" y="211">UK teacher_no : VARCHAR(20)</text><text x="52" y="245">name : VARCHAR(50)</text>
+<text x="367" y="247">PK id : BIGINT</text><text x="367" y="281">FK teacher_id : BIGINT</text><text x="367" y="315">FK course_id : BIGINT</text><text x="367" y="349">FK semester_id : BIGINT</text>
+<text x="692" y="177">PK id : BIGINT</text><text x="692" y="211">UK course_code : VARCHAR(20)</text><text x="692" y="245">name : VARCHAR(100)</text><text x="692" y="279">credits : DECIMAL(4,1)</text>
+</g>
+<g fill="none" stroke="#536779" stroke-width="2"><path d="M285 180 H315 V250 H350"/><path d="M675 180 H645 V285 H610"/></g>
+<g font-size="14"><text x="293" y="170">1</text><text x="315" y="274">0..N</text><text x="650" y="170">1</text><text x="614" y="310">0..N</text></g>
+<text x="35" y="402" font-size="14">两条联系均为一对多；每个教学班必须关联一位教师和一门课程。</text>
+</g></svg>

@@ -1,0 +1,4 @@
+# Copy to database.properties locally; never commit credentials.
+url=jdbc:mysql://localhost:3306/course_selection?characterEncoding=UTF-8&connectionTimeZone=LOCAL
+user=REPLACE_WITH_DATABASE_USER
+password=REPLACE_WITH_DATABASE_PASSWORD

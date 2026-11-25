@@ -1,0 +1,20 @@
+erDiagram
+    teacher ||--o{ teaching_class : teaches
+    course ||--o{ teaching_class : offers
+    teacher {
+        BIGINT id PK
+        VARCHAR20 teacher_no UK
+        VARCHAR50 name
+    }
+    course {
+        BIGINT id PK
+        VARCHAR20 course_code UK
+        VARCHAR100 name
+        DECIMAL4_1 credits
+    }
+    teaching_class {
+        BIGINT id PK
+        BIGINT teacher_id FK
+        BIGINT course_id FK
+        BIGINT semester_id FK
+    }
